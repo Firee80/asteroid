@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  width: 100%;
+  background-color: black;
+}
+
+@media (max-width: 31.25rem) {
+  .app-main {
+    margin: 0 2px;
+  }
+}
+
+.hidden {
+  display: none;
+}

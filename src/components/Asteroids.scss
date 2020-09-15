@@ -1,0 +1,33 @@
+.asteroids {
+  max-width: 34.375rem;
+  margin: 2rem auto;
+}
+
+.asteroids-header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0.625rem 0;
+  opacity: 0.5;
+  height: 8rem;
+}
+
+.asteroids-main {
+  background-color: black;
+  opacity: 0.95;
+  border-radius: 0.3125rem;
+}
+
+.asteroids-footer {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 1.875rem 0;
+  position: relative;
+
+  img {
+    max-width: 6.25rem;
+    padding: 0.625rem 1.25rem;
+    display: inline-block;
+  }
+}

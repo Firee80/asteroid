@@ -1,0 +1,56 @@
+.grid {
+  &__title {
+    height: 3.75rem;
+    background-color: black;
+    position: relative;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9375rem;
+    line-height: 3.75rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__table {
+    display: flex;
+    flex-direction: column;
+    margin: 2px 2px;
+  }
+}
+
+.animate-grid {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background: lawngreen;
+    opacity: 0.4;
+    clip-path: polygon(0 0,0 100%,100% 0, 100% 100%);
+    animation:rotate 9s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  50% {
+    transform:rotate(90deg) scaleX(0.5) ;
+  }
+  100% {
+    transform:rotate(180deg);
+  }
+}

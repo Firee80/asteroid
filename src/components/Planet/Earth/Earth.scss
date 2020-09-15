@@ -1,0 +1,11 @@
+.earth {
+  position: absolute;
+  left: 3.125rem;
+  top: 3.125rem;
+}
+
+@media (max-width: 31.25rem) {
+  .earth {
+    display: none;
+  }
+}

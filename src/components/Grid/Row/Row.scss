@@ -1,0 +1,66 @@
+.row, .header-row {
+  height: 1.875rem;
+  border-bottom: 1px solid rgba(56, 56, 56, .5);
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  line-height: 1.875rem;
+  text-align: center;
+}
+
+.row {
+  cursor: pointer;
+
+  &--selected {
+    color: rgba(255, 255, 255, 1);
+    opacity: 0.7;
+    border-bottom: 1px solid transparent;
+  }
+
+  &:not(.row--selected) {
+    color: rgba(255, 255, 255, .4);
+  }
+
+  &:hover:not(.row--selected) {
+    opacity: 0.85;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.header-row {
+  color: rgba(255, 255, 255, .6);
+}
+
+.row-col, .header-row-col {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+
+.row-col1, .header-row-col1 {
+  width: 15%;
+  border-right: 1px solid rgba(56, 56, 56, .5);
+
+}
+
+.row-col2, .header-row-col2 {
+  width: 30%;
+  border-right: 1px solid rgba(56, 56, 56, .5);
+  overflow: hidden;
+}
+
+.row-col3, .header-row-col3 {
+  width: 27%;
+  border-right: 1px solid rgba(56, 56, 56, .5);
+}
+
+.row-col4, .header-row-col4 {
+  width: 27%;
+}
+
+@media (max-width: 31.25rem) {
+  .grid-header {
+    font-size: 0.8125rem;
+  }
+}

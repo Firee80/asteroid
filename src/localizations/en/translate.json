@@ -1,0 +1,12 @@
+{
+  "translations": {
+    "gridHeader": {
+      "date": "Date",
+      "name": "Name",
+      "diameter": "Diameter (m)",
+      "distance": "Distance (lunar)"
+    },
+    "asteroidsBetweenDates": "Asteroids observed between {{startDate}} and {{endDate}}",
+    "loading": "Loading asteroids.."
+  }
+}
