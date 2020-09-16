@@ -17,7 +17,10 @@ export const asteroidStylesState = atom({
 export const asteroidDataAsyncState = selector({
   key: 'asteroidDataAsync',
   get: async () => {
-    const {apiKey, endDate, startDate} = config
+    const {apiKey: configApiKey, endDate, startDate} = config
+    const urlParamApiKey = (new URL(window.location.href)).searchParams.get('apiKey')
+    const apiKey = urlParamApiKey ?? configApiKey
+
     const getUrl = (start: string, end: string) => {
       return `https://api.nasa.gov/neo/rest/v1/feed?api_key=${apiKey}&start_date=${start}&end_date=${end}`
     }
@@ -39,7 +42,6 @@ export const asteroidDataAsyncState = selector({
     }
 
     const dates = getDates(startDate, endDate)
-    console.log(dates)
     const urls = dates.map(({start, end}) => getUrl(start, end))
     const responses = urls.map(async url => {
       const response = await fetch(url)
